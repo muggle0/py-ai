@@ -7,7 +7,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 
 if __name__ == '__main__':
-    llm = ChatOpenAI(api_key="sk-e3cb8a78bd54403eb488390565ece237",base_url="https://api.deepseek.com/v1",model="deepseek-chat")
+    llm = ChatOpenAI(api_key="",base_url="https://api.deepseek.com/v1",model="deepseek-chat")
     prompt = ChatPromptTemplate.from_template("请根据提示词生成营销短文：{input}")
     output_parser=StrOutputParser()
     # 自定义操作符重载
