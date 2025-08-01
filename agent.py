@@ -14,3 +14,4 @@ if __name__ == '__main__':
         base_url="https://api.deepseek.com/v1",  # 硅基流动模型的请求url
         api_key="x",  # 填写你注册的硅基流动 API Key
     )
+    
