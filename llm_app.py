@@ -2,7 +2,7 @@
 # from av.container import result
 from langchain.chains.question_answering.map_rerank_prompt import output_parser
 from langchain_core.output_parsers import StrOutputParser
-from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.prompts import ChatPromptTemplate, PromptTemplate
 
 from langchain_openai import ChatOpenAI
 
@@ -15,3 +15,7 @@ if __name__ == '__main__':
     # print(chain.invoke({"input":"康师傅绿茶"}))
     for chunk in chain.stream({"input": "康师傅绿茶"}):
         print(chunk, end="", flush=True)
+
+    template = PromptTemplate.from_template("分析一下{input}这个品牌的特点")
+    result = template.format(input="康师傅")
+    print(result)
