@@ -4,7 +4,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 
 if __name__ == '__main__':
-    model = ChatOpenAI(api_key="sk-e3cb8a78bd54403eb488390565ece237", base_url="https://api.deepseek.com/v1", model="deepseek-chat")
+    model = ChatOpenAI(api_key="x", base_url="https://api.deepseek.com/v1", model="deepseek-chat")
 
     # 搭建链条，把model和字符串输出解析器组件连接在一起
     basic_qa_chain = model | StrOutputParser()
